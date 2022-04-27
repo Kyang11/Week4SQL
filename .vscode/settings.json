@@ -1,0 +1,31 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "DVD_Ku",
+            "connectString": "postgres://dqzcnpmk:zFHgWMIR04N1IpoPjBSuKyF6hUtzEWkD@isilo.db.elephantsql.com/dqzcnpmk"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "cae89mock",
+            "connectString": "postgres://emaxbcgg:29iEaqJR1IE8w4s60ar_kqDA2ac7IZ7Y@isilo.db.elephantsql.com/emaxbcgg"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "connectString": "postgres://pdlofgsi:xxSYi9RcQA5jVRg_RjhSgfaX_aovxCFe@isilo.db.elephantsql.com/pdlofgsi",
+            "name": "movies_database"
+        }
+    ]
+}
