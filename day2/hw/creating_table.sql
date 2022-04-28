@@ -18,7 +18,7 @@ CREATE TABLE movies (
 DROP TABLE IF EXISTS concession CASCADE;
 CREATE TABLE concession(
     concession_id serial PRIMARY KEY,
-    concession_order_number INTEGER NOT NULL,
+    concession_order_number varchar(10),
     date_time TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc',now())
 
 );
@@ -35,19 +35,18 @@ DROP TABLE IF EXISTS customer_movie CASCADE;
 CREATE TABLE customer_movie(
     customer_id INTEGER NOT NULL,
     movie_id INTEGER NOT NULL,
-    FOREIGN KEY (movie_id) REFERENCES movies(movies_id),
+    FOREIGN KEY (movie_id) REFERENCES movies(movie_id),
     FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
 );
 
 DROP TABLE IF EXISTS ticket CASCADE;
 CREATE TABLE ticket(
-    ticket_id product PRIMARY KEY,
-    movies_id INTEGER NOT NULL,
+    ticket_id serial  PRIMARY KEY,
+    movie_id INTEGER,
     ticket_number VARCHAR(50),
-    movies_name Varchar(100),
+    movie_name Varchar(100),
     date_time TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc',now()),
-    venue Varchar(50),
-    FOREIGN KEY (movies_id) REFERENCES ticket(movies_id)
+    FOREIGN KEY (movie_id) REFERENCES movies(movie_id)
 
 );
 
@@ -55,7 +54,7 @@ DROP TABLE IF EXISTS cashier CASCADE;
 CREATE TABLE cashier(
     employee_id serial PRIMARY KEY, 
     emplyee_name varchar(100),
-    concession_id INTEGER NOT NULL,
+    concession_id INTEGER,
     employee_phone varchar(13),
     FOREIGN KEY (concession_id) REFERENCES concession(concession_id)  
 );
@@ -66,7 +65,6 @@ CREATE TABLE movies_cashier(
     employee_id INTEGER NOT NULL,
     movie_id INTEGER NOT NULL,
     ticket_id INTEGER NOT NULL,
-    movie_id INTEGER NOT NULL,
     FOREIGN KEY (employee_id) REFERENCES cashier(employee_id),
     FOREIGN KEY (movie_id) REFERENCES movies(movie_id),
     FOREIGN KEY (ticket_id) REFERENCES ticket(ticket_id)
@@ -76,8 +74,8 @@ CREATE TABLE movies_cashier(
 DROP TABLE IF EXISTS payment CASCADE;
 CREATE TABLE payment(
     payment_id serial PRIMARY KEY,
-    employee_id INTEGER NOT NULL,
-    amount decimal(10,2) NOT NULL,
+    employee_id INTEGER,
+    amount decimal(10,2),
     customer_name varchar(50),
     date_time TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc',now()),
     FOREIGN KEY (employee_id) REFERENCES cashier(employee_id)

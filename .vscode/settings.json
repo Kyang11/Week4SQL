@@ -26,6 +26,15 @@
             "driver": "PostgreSQL",
             "connectString": "postgres://pdlofgsi:xxSYi9RcQA5jVRg_RjhSgfaX_aovxCFe@isilo.db.elephantsql.com/pdlofgsi",
             "name": "movies_database"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "connectString": "postgres://jvrqodog:sNOMJE1HfoEvEK9VXvWOtGCoU0erLPNw@isilo.db.elephantsql.com/jvrqodog",
+            "name": "ku"
         }
     ]
 }

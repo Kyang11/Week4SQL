@@ -1,0 +1,15 @@
+1. Inside of your ERD please backup the reasoning behind why
+ you decided to use the relationships you chose. You can do so by
+ adding text to the bottom of the ERD.
+
+
+ I chose thise relationships because I table connecting 
+ by using PK and FK. In this way, we can pull out data from another 
+ table by the key ID. My structure is straight forward
+ 1. Have customers come in and check the movies 
+ 2. One that ppick movies connecting with cashier for payment
+ 3. Print ticket with information table 
+ 4. User have option to buy drink on concession 
+ 5. Now linked the ticket to seat and connect seat to the room 
+
+
