@@ -35,6 +35,15 @@
             "driver": "PostgreSQL",
             "connectString": "postgres://jvrqodog:sNOMJE1HfoEvEK9VXvWOtGCoU0erLPNw@isilo.db.elephantsql.com/jvrqodog",
             "name": "ku"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "connectString": "postgres://ewfbxdng:Kl22Qq01QogGuYPz_C2339fTyeGixWVR@chunee.db.elephantsql.com/ewfbxdng",
+            "name": "Car Dealer Database"
         }
     ]
 }
